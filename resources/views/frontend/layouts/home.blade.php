@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Design a full template by bootsrap</title>
-	<link rel="stylesheet" href="css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="css/customize.css">
+	<title>Laravel Site</title>
+	<link rel="stylesheet" href="{{asset('public/frontend/css/bootstrap.min.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{asset('public/frontend/css/customize.css')}}">
 	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
@@ -11,7 +11,7 @@
 	<section class="header">
 		<div class="container">
 			<nav class="navbar navbar-expand-md navbar-light">
-				<a href="" class="navbar-brand"><img src="image/logo.png" style="height: 50px;"></a>
+				<a href="" class="navbar-brand"><img src="{{asset('public/frontend/image/logo.png')}}" style="height: 50px;"></a>
 				<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse"><span class="navbar-toggler-icon"></span></button>
 				<div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
 					<div class="navbar-nav popular">
@@ -52,21 +52,21 @@
 		    </ol>
 		    <div class="carousel-inner" role="listbox">
 		      <!-- Slide One - Set the background image for this slide in the line below -->
-		      <div class="carousel-item active" style="background-image: url('image/slider4.jpeg')">
+		      <div class="carousel-item active" style="background-image: url('public/frontend/image/slider4.jpeg')">
 		        <div class="carousel-caption d-none d-md-block">
 		          <h2 class="display-4">First Slide</h2>
 		          <p class="lead">This is a description for the first slide.</p>
 		        </div>
 		      </div>
 		      <!-- Slide Two - Set the background image for this slide in the line below -->
-		      <div class="carousel-item" style="background-image: url('image/slider5.jpg')">
+		      <div class="carousel-item" style="background-image: url('public/frontend/image/slider5.jpg')">
 		        <div class="carousel-caption d-none d-md-block">
 		          <h2 class="display-4">Second Slide</h2>
 		          <p class="lead">This is a description for the second slide.</p>
 		        </div>
 		      </div>
 		      <!-- Slide Three - Set the background image for this slide in the line below -->
-		      <div class="carousel-item" style="background-image: url('image/slider6.jpg')">
+		      <div class="carousel-item" style="background-image: url('public/frontend/image/slider6.jpg')">
 		        <div class="carousel-caption d-none d-md-block">
 		          <h2 class="display-4">Third Slide</h2>
 		          <p class="lead">This is a description for the third slide.</p>
@@ -93,11 +93,11 @@
 			</div>
 			<div class="row">
 				<div class="col-md-6">
-					<img src="image/mission.jpg" style="border: 1px solid #ddd;padding: 5px;background: #EFEE03;border-radius: 30px;float: left;margin-right: 10px;">
+					<img src="public/frontend/image/mission.jpg" style="border: 1px solid #ddd;padding: 5px;background: #EFEE03;border-radius: 30px;float: left;margin-right: 10px;">
 					<p style="text-align: justify;"><strong>Mission</strong> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
 				</div>
 				<div class="col-md-6">
-					<img src="image/vision.jpg" style="border: 1px solid #ddd;padding: 5px;background: #EFEE03;border-radius: 30px;float: left;margin-right: 10px;">
+					<img src="public/frontend/image/vision.jpg" style="border: 1px solid #ddd;padding: 5px;background: #EFEE03;border-radius: 30px;float: left;margin-right: 10px;">
 					<p style="text-align: justify;"><strong>Vision</strong> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
 				</div>
 			</div>
@@ -125,21 +125,21 @@
 							<tr>
 								<td>1</td>
 								<td>24/11/2019</td>
-								<td><img src="image/news1.jpg"></td>
+								<td><img src="public/frontend/image/news1.jpg"></td>
 								<td>Dummy content</td>
 								<td><a href="" class="btn btn-info">Details</a></td>
 							</tr>
 							<tr>
 								<td>2</td>
 								<td>25/11/2019</td>
-								<td><img src="image/news2.jpg"></td>
+								<td><img src="public/frontend/image/news2.jpg"></td>
 								<td>Dummy content2</td>
 								<td><a href="" class="btn btn-info">Details</a></td>
 							</tr>
 							<tr>
 								<td>3</td>
 								<td>26/11/2019</td>
-								<td><img src="image/news3.jpg"></td>
+								<td><img src="public/frontend/image/news3.jpg"></td>
 								<td>Dummy content3</td>
 								<td><a href="" class="btn btn-info">Details</a></td>
 							</tr>
@@ -183,20 +183,20 @@
 	</section>
 
 	<!-- Footer Part -->
-	<section class="footer_part">
+    <section class="footer_part">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-8">
 					<h4 style="color: white">Contact Us</h4>
-					<p style="color: white">Address: Notun bazar,Gulshan-Dhaka, Mobile: 01928511049, Email: asadullahkpi@gmail.com</p>
+					<p style="color: white">Address: Narshingdi,Dhaka Mobile: 01913547894, Email: me@abiruzzaman.me</p>
 				</div>
 				<div class="col-md-4">
 					<h4 style="color: white">Follow Us</h4>
 					<div class="social">
 						<ul>
-							<li><a href="https://www.facebook.com/popularsoftbd/?modal=admin_todo_tour" target="_blank"><i class="fa fa-facebook-square"></i></a></li>
+							<li><a href="https://www.facebook.com/asliabir/?modal=admin_todo_tour" target="_blank"><i class="fa fa-facebook-square"></i></a></li>
 							<li><a href=""><i class="fa fa-twitter-square"></i></a></li>
-							<li><a href="https://www.youtube.com/channel/UCiO1LbMZH6E4vSEoaqS5erA/playlists" target="_blank"><i class="fa fa-youtube-square"></i></a></li>
+							<li><a href="https://www.youtube.com/c/islamicaudiobook" target="_blank"><i class="fa fa-youtube-square"></i></a></li>
 							<li><a href=""><i class="fa fa-google-plus-square"></i></a></li>
 						</ul>
 					</div>
@@ -205,7 +205,7 @@
 			<div class="row">
 				<div class="col-md-12 text-center">
 					<p style="color: white;padding: 50px 0px 10px 0px;">
-						Copyright &copy; <script type="text/javascript">document.write(new Date().getFullYear())</script> @ Popularsoft
+						Copyright &copy; <script type="text/javascript">document.write(new Date().getFullYear())</script> <a href="https://abiruzzaman.me">@abiruzzaman.me</a>
 					</p>
 				</div>
 			</div>
@@ -238,7 +238,7 @@
 			});
 		});
 	</script>
-	<script src="js/popper.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>
+	<script src="{{asset('public/frontend/js/popper.min.js')}}"></script>
+	<script src="{{asset('public/frontend/js/bootstrap.min.js')}}"></script>
 </body>
 </html>
