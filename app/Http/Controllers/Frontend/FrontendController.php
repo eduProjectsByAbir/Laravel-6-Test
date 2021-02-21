@@ -10,4 +10,10 @@ class FrontendController extends Controller
     public function index(){
         return view('frontend.layouts.home');
     }
+    public function aboutUs(){
+        return view('frontend.single_pages.about-us');
+    }
+    public function contactUs(){
+        return view('frontend.single_pages.contact-us');
+    }
 }
