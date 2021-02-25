@@ -16,7 +16,7 @@
                     </div>
                     <a href="" class="nav-item nav-link">News and Event</a>
                     <a href="{{ route('contact.us') }}" class="nav-item nav-link">Contact Us</a>
-                    <a href="" class="nav-item nav-link">Login</a>
+                    <a href="{{ __('login')  }}" class="nav-item nav-link">Login</a>
                 </div>
                 <div class="navbar-nav">
                     <form class="form-inline">
