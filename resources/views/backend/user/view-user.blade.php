@@ -29,7 +29,7 @@
                         <div class="card">
                             <div class="card-header">
                                 <h3>User List
-                                    <a class="btn btn-success float-right" href=""><i class="fa fa-plus-circle"></i> Add User</a>
+                                    <a class="btn btn-success float-right" href="{{route('users.add')}}"><i class="fa fa-plus-circle"></i> Add User</a>
                                 </h3>
                             </div>
                             <div class="card-body">
@@ -52,12 +52,12 @@
                                         <td>{{ $user->name  }}</td>
                                         <td>{{ $user->email  }}</td>
                                         <td>
-                                            <a href="" title="edit" class="btn btn-sm btn-warning"><i class="fa fa-edit"></i></a>
+                                            <a href="{{route('users.edit', $user->id)}}" title="edit" class="btn btn-sm btn-warning"><i class="fa fa-edit"></i></a>
                                             <a href="" title="delete" class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></a>
                                         </td>
                                     </tr>
                                     @endforeach
-                                    </tfoot>
+                                    </tbody>
                                 </table>
                             </div>
                         </div>

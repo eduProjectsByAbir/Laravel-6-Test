@@ -7,12 +7,12 @@
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h1 class="m-0">Add User</h1>
+                        <h1 class="m-0">Edit User</h1>
                     </div><!-- /.col -->
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
                             <li class="breadcrumb-item"><a href="{{ url('/')  }}">Home</a></li>
-                            <li class="breadcrumb-item active">Add User</li>
+                            <li class="breadcrumb-item active">Edit User</li>
                         </ol>
                     </div><!-- /.col -->
                 </div><!-- /.row -->
@@ -28,7 +28,7 @@
                     <section class="col-md-12">
                         <div class="card">
                             <div class="card-header">
-                                <h3>Add User
+                                <h3>Edit User
                                     <a class="btn btn-success float-right" href="{{route('users.view')}}"><i class="fa fa-list"></i> View User</a>
                                 </h3>
                             </div>
@@ -42,32 +42,24 @@
                                         </ul>
                                     </div>
                                 @endif
-                                <form action="{{route('users.store')}}" method="post" id="myForm">
+                                <form action="{{route('users.update', $editData->id)}}" method="post" id="myForm">
                                     @csrf
                                     <div class="form-row">
                                         <div class="form-group col-md-4">
                                             <label for="usertype">User Type</label>
                                             <select name="usertype" id="usertype" class="form-control">
                                                 <option value="">Select Role</option>
-                                                <option value="Admin">Admin</option>
-                                                <option value="User">User</option>
+                                                <option value="Admin" {{($editData->usertype == 'Admin')? "selected": ""}}>Admin</option>
+                                                <option value="User" {{($editData->usertype == 'User')? "selected": ""}}>User</option>
                                             </select>
                                         </div>
                                         <div class="form-group col-md-4">
                                             <label for="name">Name</label>
-                                            <input type="text" name="name" id="name" class="form-control">
+                                            <input type="text" name="name" value="{{$editData->name}}" id="name" class="form-control">
                                         </div>
                                         <div class="form-group col-md-4">
                                             <label for="email">Email</label>
-                                            <input type="email" name="email" id="email" class="form-control">
-                                        </div>
-                                        <div class="form-group col-md-4">
-                                            <label for="password">Password</label>
-                                            <input type="password" name="password" id="password" class="form-control">
-                                        </div>
-                                        <div class="form-group col-md-4">
-                                            <label for="password2">Password</label>
-                                            <input type="password" name="password2" id="password2" class="form-control">
+                                            <input type="email" name="email" value="{{$editData->email}}" id="email" class="form-control">
                                         </div>
                                         <div class="form-group col-md-6">
                                             <input type="submit" value="Submit" class="btn btn-primary">
@@ -93,39 +85,23 @@
                         required: true,
                     },
                     name: {
-                      required: true,
+                        required: true,
                     },
                     email: {
                         required: true,
                         email: true,
                     },
-                    password: {
-                        required: true,
-                        minlength: 8
-                    },
-                    password2: {
-                      required: true,
-                      equalTo: '#password'
-                    },
                 },
                 messages: {
                     usertype: {
-                      required: 'Please select user role first!'
+                        required: 'Please select user role first!'
                     },
                     name: {
-                      required: 'Please enter your name!'
+                        required: 'Please enter your name!'
                     },
                     email: {
                         required: "Please enter a email address",
                         email: "Please enter a vaild email address"
-                    },
-                    password: {
-                        required: "Please provide a password",
-                        minlength: "Your password must be at least 8 characters long"
-                    },
-                    password2: {
-                        required: "Please enter confirm password",
-                        equalTo: "Confirm password does not match!"
                     },
                 },
                 errorElement: 'span',
