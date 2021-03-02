@@ -32,7 +32,7 @@ class UserController extends Controller
         $data->password = bcrypt($request->password);
         $data->save();
 
-        return redirect()->route('users.view');
+        return redirect()->route('users.view')->with('success', 'User created successful!');
 
     }
 
@@ -47,6 +47,12 @@ class UserController extends Controller
         $data->name = $request->name;
         $data->email = $request->email;
         $data->save();
-        return redirect()->route('users.view');
+        return redirect()->route('users.view')->with('success', 'User info updated!');
+    }
+
+    public function delete($id){
+        $data = User::find($id);
+        $data->delete();
+        return redirect()->route('users.view')->with('success', 'User Deleted!');
     }
 }
