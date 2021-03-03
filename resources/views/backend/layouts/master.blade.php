@@ -237,6 +237,13 @@
                 });
             </script>
         @endif
+    @if (session()->has('warning'))
+            <script type="text/javascript">
+                    $(function (){
+                        $.notify("{{session()->get('warning')}}", {globalPosition: 'top right', className: 'warning'});
+                    });
+                </script>
+        @endif
         <footer class="main-footer">
             <strong>Copyright &copy; 2014-2021 <a href="https://abiruzzaman.me">Abir</a>.</strong>
             All rights reserved.
