@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="{{ asset('public/backend/plugins/jqvmap/jqvmap.min.css')  }}">
     <!-- Theme style -->
     <link rel="stylesheet" href="{{ asset('public/backend/dist/css/adminlte.min.css')  }}">
+    <link rel="stylesheet" href="{{ asset('public/backend/plugins/sweetalert2/sweetalert2.min.css') }}">
     <!-- overlayScrollbars -->
     <link rel="stylesheet"
         href="{{ asset('public/backend/plugins/overlayScrollbars/css/OverlayScrollbars.min.css')  }}">
@@ -33,6 +34,13 @@
     <link rel="stylesheet" href="{{ asset('public/backend') }}/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
     <link rel="stylesheet" href="{{ asset('public/backend') }}/plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
     <link rel="stylesheet" href="{{ asset('public/backend') }}/plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
+    <!-- jQuery -->
+    <script src="{{ asset('public/backend/plugins/jquery/jquery.min.js') }}"></script>
+    <style>
+        .notifyjs-corner{
+            z-index: 10000 !important;
+        }
+    </style>
 </head>
 
 <body class="hold-transition sidebar-mini layout-fixed">
@@ -222,6 +230,20 @@
         <!-- Content Wrapper. Contains page content -->
         @yield('content')
         <!-- /.content-wrapper -->
+        @if (session()->has('success'))
+            <script type="text/javascript">
+                $(function (){
+                    $.notify("{{session()->get('success')}}", {globalPosition: 'top right', className: 'success'});
+                });
+            </script>
+        @endif
+    @if (session()->has('warning'))
+            <script type="text/javascript">
+                    $(function (){
+                        $.notify("{{session()->get('warning')}}", {globalPosition: 'top right', className: 'warning'});
+                    });
+                </script>
+        @endif
         <footer class="main-footer">
             <strong>Copyright &copy; 2014-2021 <a href="https://abiruzzaman.me">Abir</a>.</strong>
             All rights reserved.
@@ -238,8 +260,7 @@
     </div>
     <!-- ./wrapper -->
 
-    <!-- jQuery -->
-    <script src="{{ asset('public/backend/plugins/jquery/jquery.min.js') }}"></script>
+
     <!-- jQuery UI 1.11.4 -->
     <script src="{{ asset('public/backend/plugins/jquery-ui/jquery-ui.min.js') }}"></script>
     <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
@@ -267,7 +288,9 @@
     <!-- Summernote -->
     <script src="{{ asset('public/backend/plugins/summernote/summernote-bs4.min.js') }}"></script>
     <!-- overlayScrollbars -->
-    <script src="{{ asset('public/backend/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js') }}"></script
+    <script src="{{ asset('public/backend/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js') }}"></script>
+    <script src="{{ asset('public/backend/plugins/notify/notify.min.js') }}"></script>
+    <script src="{{ asset('public/backend/plugins/sweetalert2/sweetalert2.all.min.js') }}"></script>
         <!-- DataTables  & Plugins -->
     <script src="{{ asset('public/backend') }}/plugins/datatables/jquery.dataTables.min.js"></script>
     <script src="{{ asset('public/backend') }}/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
@@ -281,6 +304,9 @@
     <script src="{{ asset('public/backend') }}/plugins/datatables-buttons/js/buttons.html5.min.js"></script>
     <script src="{{ asset('public/backend') }}/plugins/datatables-buttons/js/buttons.print.min.js"></script>
     <script src="{{ asset('public/backend') }}/plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
+    <!-- jquery-validation -->
+    <script src="{{ asset('public/backend') }}/plugins/jquery-validation/jquery.validate.min.js"></script>
+    <script src="{{ asset('public/backend') }}/plugins/jquery-validation/additional-methods.min.js"></script>
     <!-- AdminLTE App -->
     <script src="{{ asset('public/backend/dist/js/adminlte.js') }}"></script>
     <!-- AdminLTE for demo purposes -->
@@ -302,6 +328,32 @@
                 "info": true,
                 "autoWidth": false,
                 "responsive": true,
+            });
+        });
+    </script>
+    <script type="text/javascript">
+        $(function (){
+            $(document).on('click', '#delete', function (e){
+                e.preventDefault();
+                var link = $(this).attr("href");
+                 Swal.fire({
+                     title: 'Are you sure?',
+                     text: "You won't be able to revart this!",
+                     icon: 'warning',
+                     showCancelButton: true,
+                     confirmButtonColor: '#3085d6',
+                     cancelButtonColor: '#d33',
+                     confirmButtonText: 'Yes, Delete it!'
+                 }).then((result)=> {
+                     if (result.value){
+                         window.location.href = link;
+                         Swal.fire(
+                             'Deleted!',
+                             'Your user has been Deleted!',
+                             'success'
+                         )
+                     }
+                 })
             });
         });
     </script>

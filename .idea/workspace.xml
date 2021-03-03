@@ -20,14 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9826a376-d6b8-4da1-9178-dacb2d31a742" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/laravel-site.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/symfony2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/backend/user/view-user.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/backend/layouts/master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/layouts/master.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Backend/ProfileController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/backend/user/view-profile.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/backend/layouts/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/layouts/sidebar.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
@@ -48,6 +43,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="date0203" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
@@ -159,13 +159,14 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager">
@@ -185,7 +186,14 @@
       <workItem from="1614493662409" duration="700000" />
       <workItem from="1614494423113" duration="134000" />
       <workItem from="1614494583810" duration="1854000" />
-      <workItem from="1614501351472" duration="3108000" />
+      <workItem from="1614501351472" duration="4480000" />
+      <workItem from="1614514704380" duration="5018000" />
+      <workItem from="1614593503210" duration="5011000" />
+      <workItem from="1614617077919" duration="584000" />
+      <workItem from="1614617691143" duration="4993000" />
+      <workItem from="1614677888498" duration="3614000" />
+      <workItem from="1614695577786" duration="2632000" />
+      <workItem from="1614755738565" duration="3096000" />
     </task>
     <servers />
   </component>
@@ -204,14 +212,25 @@
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
   <component name="WindowStateProjectService">
     <state x="466" y="250" key="#Composer" timestamp="1614493977022">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="466" y="250" key="#Composer/0.0.1366.738/1366.0.1366.738@0.0.1366.738" timestamp="1614493977022" />
-    <state x="184" y="14" key="SettingsEditor" timestamp="1614501414271">
+    <state x="355" y="159" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1614505855432">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="184" y="14" key="SettingsEditor/0.0.1366.738/1366.0.1366.738@0.0.1366.738" timestamp="1614501414271" />
+    <state x="355" y="159" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.738/1366.0.1366.738@0.0.1366.738" timestamp="1614505855432" />
+    <state x="184" y="14" key="SettingsEditor" timestamp="1614679084100">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="184" y="14" key="SettingsEditor/0.0.1366.738/1366.0.1366.738@0.0.1366.738" timestamp="1614679084100" />
+    <state x="346" y="59" width="672" height="678" key="search.everywhere.popup" timestamp="1614621984025">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="346" y="59" width="672" height="678" key="search.everywhere.popup/0.0.1366.738/1366.0.1366.738@0.0.1366.738" timestamp="1614621984025" />
   </component>
 </project>
