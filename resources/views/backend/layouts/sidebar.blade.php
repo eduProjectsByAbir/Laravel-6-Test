@@ -30,9 +30,9 @@
             </a>
             <ul class="nav nav-treeview">
                 <li class="nav-item">
-                    <a href="{{ route('users.view')  }}" class="nav-link">
+                    <a href="{{ route('profiles.view')  }}" class="nav-link">
                         <i class="far fa-circle nav-icon"></i>
-                        <p>View Users</p>
+                        <p>Your Profile</p>
                     </a>
                 </li>
             </ul>
