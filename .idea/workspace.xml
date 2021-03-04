@@ -20,9 +20,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9826a376-d6b8-4da1-9178-dacb2d31a742" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/backend/upload/no-image.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/upload/user_images/20210304144647574826_1949429608479193_3046401954952511488_o.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/backend/user/edit-profile.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Backend/ProfileController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Backend/ProfileController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/backend/layouts/master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/layouts/master.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/backend/user/view-profile.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/user/view-profile.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -44,7 +46,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="date0203" />
+        <entry key="$PROJECT_DIR$" value="date0303" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -193,7 +195,7 @@
       <workItem from="1614677888498" duration="3614000" />
       <workItem from="1614695577786" duration="2632000" />
       <workItem from="1614755738565" duration="3825000" />
-      <workItem from="1614849393099" duration="2336000" />
+      <workItem from="1614849393099" duration="9207000" />
     </task>
     <servers />
   </component>
