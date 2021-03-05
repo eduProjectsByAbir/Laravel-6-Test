@@ -7,8 +7,15 @@ use Illuminate\Http\Request;
 
 class FrontendController extends Controller
 {
+//    public function index(){
+//        return view('frontend.layouts.home');
+//    }
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     public function index(){
-        return view('frontend.layouts.home');
+        return view('backend.layouts.home');
     }
     public function aboutUs(){
         return view('frontend.single_pages.about-us');
