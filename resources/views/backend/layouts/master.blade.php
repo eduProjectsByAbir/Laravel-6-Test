@@ -54,7 +54,7 @@
                     <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
                 </li>
                 <li class="nav-item d-none d-sm-inline-block">
-                    <a href="{{ route('home')  }}" class="nav-link">Home</a>
+                    <a href="{{ route('home') }}" class="nav-link">Home</a>
                 </li>
                 <li class="nav-item d-none d-sm-inline-block">
                     <a href="#" class="nav-link">Contact</a>
@@ -193,7 +193,7 @@
                 <!-- Sidebar user panel (optional) -->
                 <div class="user-panel mt-3 pb-3 mb-3 d-flex">
                     <div class="image">
-                        <img src="{{ asset('public/backend/dist/img/user2-160x160.jpg')}}"
+                        <img src="{{(empty(Auth::user()->image)) ? asset('public/backend/upload/no-image.png') : url('public/upload/user_images/'.Auth::user()->image) }}"
                             class="img-circle elevation-2" alt="User Image">
                     </div>
                     <div class="info">
@@ -237,12 +237,19 @@
                 });
             </script>
         @endif
-    @if (session()->has('warning'))
+        @if (session()->has('warning'))
             <script type="text/javascript">
                     $(function (){
                         $.notify("{{session()->get('warning')}}", {globalPosition: 'top right', className: 'warning'});
                     });
                 </script>
+        @endif
+        @if (session()->has('error'))
+            <script type="text/javascript">
+                $(function (){
+                    $.notify("{{session()->get('error')}}", {globalPosition: 'top right', className: 'error'});
+                    });
+            </script>
         @endif
         <footer class="main-footer">
             <strong>Copyright &copy; 2014-2021 <a href="https://abiruzzaman.me">Abir</a>.</strong>
